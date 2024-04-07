@@ -1,0 +1,12 @@
+{
+    "runOnSave.commands": [
+        {
+            "match": "\\.php$",
+            "command": "composer format:fix ${fileRelative}",
+            "runningStatusMessage": "PHP formatting",
+            "finishStatusMessage": "PHP formatted",
+            "runIn": "backend"
+        }
+    ],
+    "phpstan.configFile": "phpstan.neon, phpstan.neon.dist"
+}
