@@ -2,7 +2,9 @@
     "runOnSave.commands": [
         {
             "match": "\\.php$",
-            "command": "composer format:fix ${fileRelative}",
+            // windows環境でうまく動かせないのでどうにかしたい。
+            // run on save はexit codeが0以外の時にoutputタブを開いてしまう。
+            "command": "composer format:fix ${fileRelative} || true",
             "runningStatusMessage": "PHP formatting",
             "finishStatusMessage": "PHP formatted",
             "runIn": "backend"
